@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Happy Birthday Mini 🌌</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#fff1f6;
+    --bg2:#ffd9ec;
+    --accent:#ff5fa8;
+    --text:#2b0a1a;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;font-family:Poppins,system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--text)}
+  /* Starry nebula over pink */
+  .scene{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+  .stars{position:absolute;inset:0;background-image:radial-gradient(#fff 0.5px, transparent 0.5px);background-size:6px 6px;opacity:0.06}
+  .nebula{position:absolute;inset:-20% -10% auto auto;width:70vmax;height:70vmax;background:
+    radial-gradient(circle at 20% 20%, rgba(255,80,140,0.12), transparent 10%),
+    radial-gradient(circle at 70% 40%, rgba(120,70,255,0.06), transparent 12%);filter:blur(36px);opacity:0.9}
+  /* center card */
+  .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+  .card{width:100%;max-width:820px;padding:28px;border-radius:20px;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.45));box-shadow:0 10px 40px rgba(10,6,12,0.08);position:relative;backdrop-filter:blur(4px)}
+  h1{font-size:clamp(20px,4vw,34px);margin:0 0 8px;text-align:center;color:var(--text)}
+  .subtitle{text-align:center;color:#6b2133;font-weight:600;margin-bottom:14px}
+  .message{background:linear-gradient(180deg, rgba(255,255,255,0.5), rgba(255,255,255,0.45));padding:18px;border-radius:14px;color:#3b0f1f;line-height:1.6;font-size:16px}
+  .message b{color:#2b0711}
+  .italic{font-style:italic;color:#7d2d47}
+  .footer{text-align:center;margin-top:14px;color:#5b1d2f;font-weight:600}
+  /* floating emojis */
+  .emojiLayer{position:absolute;inset:0;pointer-events:none}
+  .float{position:absolute;font-size:26px;opacity:0;transform:translateY(60vh) scale(.6);animation:floatUp linear infinite}
+  .float.h1{left:6%;animation-duration:9.5s;animation-delay:.2s}
+  .float.h2{left:22%;animation-duration:8.4s;animation-delay:.8s}
+  .float.h3{left:38%;animation-duration:10.2s;animation-delay:.4s}
+  .float.h4{left:54%;animation-duration:7.8s;animation-delay:1.0s}
+  .float.h5{left:70%;animation-duration:9.8s;animation-delay:.3s}
+  .float.h6{left:86%;animation-duration:8.6s;animation-delay:.7s}
+  @keyframes floatUp{0%{transform:translateY(60vh) scale(.65);opacity:0}10%{opacity:1}100%{transform:translateY(-20vh) scale(1.05);opacity:0}}
+  /* invisible iframe container */
+  #ytwrap{display:none}
+  /* hero image overlay placeholder (no human image included by default) */
+  .bgImage{position:absolute;inset:0;border-radius:20px;background:radial-gradient(circle at 20% 20%, rgba(255,255,255,0.03), transparent 8%), linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));mix-blend-mode:soft-light;opacity:0.95}
+  /* responsive tweaks */
+  @media (max-width:420px){.card{padding:18px;border-radius:14px}.message{font-size:15px;padding:14px}}
+</style>
+</head>
+<body>
+  <div class="scene" aria-hidden="true">
+    <div class="stars"></div>
+    <div class="nebula" style="transform:translate(-10%, -10%)"></div>
+  </div>
+
+  <div class="wrap">
+    <div class="card" id="card">
+      <!-- If you later want to add a hugging-photo background, replace the .bgImage background with your image URL in CSS -->
+      <div class="bgImage" aria-hidden="true"></div>
+
+      <h1>**Happy Birthday meri jaan 💌🌍**</h1>
+      <div class="subtitle">For Mini (Chini) — 4 years • 4 months ✨</div>
+
+      <div class="message" id="message">
+        <p><b>4 years 4 months ho gaye… aur har ek din tumse door, par tumhare liye.</b><br>
+        Long distance tha, par dil kabhi door nahi hua.<br>
+        Kabhi screen ke us paar thi tum, kabhi meri har dua mein.</p>
+
+        <p>Itne saal ho gaye, ups & downs aaye… but ek baat kabhi change nahi hui —<br>
+        <b>I’m yours. Sirf tumhara. Hamesha.</b></p>
+
+        <p>Tum meri strength ho jab sab weak lagta hai,<br>
+        Tum meri calmness ho jab sab loud ho jata hai.<br>
+        Tum meri woh feeling ho jo har baar mujhe complete karti hai — even from miles away.</p>
+
+        <p>Aaj tumhara birthday hai... <b>happy birthday meri love</b> 💋❤️<br>
+        <em class="italic">"Distance sirf numbers hain, connection is with our hearts."</em></p>
+
+        <p><b>Happy birthday My mini</b> 🎂<br>
+        Let’s keep loving ❤️, surviving 💖, and celebrating — no matter the miles.</p>
+      </div>
+
+      <div class="footer">With all my love — <b>Mukesh ❤️</b>
+        <div style="margin-top:8px;font-size:20px">💖 💕 💋 💞 💗 💝</div>
+      </div>
+
+      <div class="emojiLayer" aria-hidden="true">
+        <div class="float h1">💖</div>
+        <div class="float h2">💋</div>
+        <div class="float h3">❤️</div>
+        <div class="float h4">💞</div>
+        <div class="float h5">😘</div>
+        <div class="float h6">💝</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- YouTube autoplay attempt: we set the iframe src on load and also again on first user interaction.
+       Many mobile browsers still require a user gesture to play sound; this code uses best-effort techniques. -->
+  <div id="ytwrap">
+    <iframe id="ytframe" width="0" height="0" src=""
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen frameborder="0" style="display:block"></iframe>
+  </div>
+
+<script>
+  // Your YouTube Shorts video id (from the link you provided)
+  const VIDEO_ID = 'b9cVv4RCQv0';
+
+  // Build embed URL with autoplay & loop & playsinline
+  const autoplayURL = `https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&controls=0&loop=1&playlist=${VIDEO_ID}&modestbranding=1&rel=0&playsinline=1`;
+
+  const ytframe = document.getElementById('ytframe');
+  const ytwrap = document.getElementById('ytwrap');
+  const card = document.getElementById('card');
+
+  // Try to set src immediately (works on some desktop/mobile browsers)
+  function tryAutoplayNow(){
+    try {
+      ytframe.src = autoplayURL;
+      ytwrap.style.display = 'block';
+      // Some browsers will not start sound until an interaction occurs.
+      // We'll also attempt to resume on first user gesture below.
+    } catch(e){}
+  }
+  tryAutoplayNow();
+
+  // If autoplay is blocked, start on first interaction (touchstart/click)
+  function userStart() {
+    if(!ytframe.src || ytframe.src === ''){
+      ytframe.src = autoplayURL;
+      ytwrap.style.display = 'block';
+    }
+    // Remove listeners after first activation
+    window.removeEventListener('touchstart', userStart);
+    window.removeEventListener('click', userStart);
+    window.removeEventListener('keydown', userStart);
+  }
+  window.addEventListener('touchstart', userStart, {passive:true});
+  window.addEventListener('click', userStart);
+  window.addEventListener('keydown', userStart);
+
+  // Some in-app browsers block autoplay aggressively. Best practices:
+  // 1) Send the link and ask her to open in Chrome or Safari (not inside apps like Instagram/Facebook).
+  // 2) If still blocked, a single tap anywhere will run the userStart() handler above and start the music.
+
+  // Subtle auto-tap hack (do not rely on it — many browsers ignore synthetic events)
+  // We won't simulate clicks because browsers ignore them for media playback.
+
+  // Randomize the float animation delays a little for natural look
+  document.querySelectorAll('.float').forEach((el)=>{
+    el.style.animationDelay = (Math.random()*1200) + 'ms';
+  });
+</script>
+</body>
+</html>
